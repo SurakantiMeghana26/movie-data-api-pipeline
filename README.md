@@ -60,29 +60,6 @@ Amazon Athena (SQL Analytics)
 ### External APIs
 - **OMDB API** — Movie metadata (titles, ratings, box office, etc.)
 
-## Project Structure
-
-movie-data-pipeline/
-├── README.md
-├── lessons_learned.md
-├── .gitignore
-├── architecture/
-│   └── architecture.md
-├── scripts/
-│   ├── fetch_movies.py          # API ingestion script
-│   └── movies_etl_job.py        # PySpark Glue ETL job
-├── athena_queries/
-│   ├── 01_top_rated_movies.sql
-│   ├── 02_movies_by_decade.sql
-│   ├── 03_best_directors.sql
-│   ├── 04_popular_genres.sql
-│   ├── 05_era_comparison.sql
-│   ├── 06_box_office_hits.sql
-│   └── 07_popularity_score.sql
-├── screenshots/
-│   └── (AWS console screenshots)
-└── movie_json/
-└── (sample raw JSON data)
 
 ## Key Features
 
@@ -114,6 +91,32 @@ The PySpark ETL adds these calculated columns:
 - **Raw zone:** Single JSON Lines file
 - **Processed zone:** Parquet, partitioned by `decade`
 - **Result:** Athena queries can prune partitions, reducing scan costs
+
+## Project Structure
+
+```
+movie-data-pipeline/
+├── README.md
+├── lessons_learned.md
+├── .gitignore
+├── architecture/
+│   └── architecture.md
+├── scripts/
+│   ├── fetch_movies.py          # API ingestion script
+│   └── movies_etl_job.py        # PySpark Glue ETL job
+├── athena_queries/
+│   ├── 01_top_rated_movies.sql
+│   ├── 02_movies_by_decade.sql
+│   ├── 03_best_directors.sql
+│   ├── 04_popular_genres.sql
+│   ├── 05_era_comparison.sql
+│   ├── 06_box_office_hits.sql
+│   └── 07_popularity_score.sql
+├── screenshots/
+│   └── (AWS console screenshots)
+└── movie_json/
+    └── (sample raw JSON data)
+```
 
 ## How to Reproduce
 
