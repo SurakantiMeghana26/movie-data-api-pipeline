@@ -1,8 +1,8 @@
-﻿# Architecture Diagram
+# Architecture Diagram
 
 ## Movie Data Pipeline
 
-\\\
+```
 ┌─────────────────┐
 │   OMDB API      │  External REST API
 └────────┬────────┘
@@ -59,7 +59,7 @@
 ┌─────────────────┐
 │ Amazon Athena   │  SQL Analytics
 └─────────────────┘
-\\\
+```
 
 ## Components
 
