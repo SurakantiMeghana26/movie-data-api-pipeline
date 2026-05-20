@@ -1,0 +1,25 @@
+﻿# Sensitive
+.env
+credentials.csv
+*.csv
+.aws/
+
+# Large data files (don't commit JSON dump, it's huge)
+movie_json/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# System
+.DS_Store
+Thumbs.db
+desktop.ini
